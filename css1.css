@@ -8,13 +8,16 @@ body{
     color: white;
     margin-left: 1rem;
 }
+.text-center{
+    text-align: center;
+}
 nav{
     display: flex;
     background-color: #02A4FF;
     height: 8vh;
     margin-right: 1rem;
     align-items: center;
-    border-radius: 0px 30px 30px 0px;
+    border-radius: 0px 25px 25px 0px;
     justify-content: space-between;
 }
 .navitems{
@@ -24,6 +27,26 @@ nav{
 #navigation{
     display: block;
     position: static;
+    transition: all 1s linear;
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#insta{
+    color: #E1306C; 
+}
+#linkedin{
+    color: #0077b5;
+}
+#github{
+    color: #333;
+}
+.social-link{
+    font-weight: 900;
+    margin: 0 0.5rem;
 }
 a{
     text-decoration: none;
@@ -46,13 +69,15 @@ a{
     #navigation{
         display: none;
         position: absolute;
-        top: 8vh;
+        top: 7vh;
         right: 1rem;
         flex-direction: column;
-        padding: 0rem 1rem 1rem 2rem;
+        padding: 0.5rem 1rem 1rem 2rem;
         background-color: #02A4FF;
-        border-radius: 0px 0px 30px 30px;
+        border-radius: 0px 0px 25px 25px;
+        
     }
+    
     .navitems{
         margin-bottom: 0.5rem;
     }
