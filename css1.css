@@ -1,0 +1,26 @@
+body{
+    margin: 0;
+    font-family: Arial Rounded MT;
+}
+#header-title{
+    color: white;
+    margin-left: 1rem;
+}
+nav{
+    display: flex;
+    background-color: #02A4FF;
+    height: 8vh;
+    margin-right: 1rem;
+    align-items: center;
+    border-radius: 0px 30px 30px 0px;
+    justify-content: space-between;
+}
+.navitems{
+    color: white;
+    margin-right: 2rem;
+}
+#navigation{
+}
+a{
+    text-decoration: none;
+}
