@@ -22,7 +22,32 @@ nav{
     margin-right: 1.5rem;
 }
 #navigation{
+    display: block;
+    position: static;
 }
 a{
     text-decoration: none;
+}
+#navi-bar{
+    display: none;
+    margin-right: 1.5rem;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 1.3rem;
+}
+@media only screen and (max-width:500px){
+    #navi-bar{
+        display: block;
+    }
+    #navigation{
+        display: none;
+        position: absolute;
+        top: 8vh;
+        right: 1rem;
+        flex-direction: column;
+        padding: 2rem;
+        background-color: #02A4FF;
+        border-radius: 0px 0px 30px 30px;
+    }
 }
