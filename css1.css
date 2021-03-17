@@ -49,8 +49,11 @@ a{
         top: 8vh;
         right: 1rem;
         flex-direction: column;
-        padding: 2rem;
+        padding: 0rem 1rem 1rem 2rem;
         background-color: #02A4FF;
         border-radius: 0px 0px 30px 30px;
+    }
+    .navitems{
+        margin-bottom: 0.5rem;
     }
 }
