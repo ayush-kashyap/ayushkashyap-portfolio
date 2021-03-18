@@ -18,6 +18,10 @@ body{
     border-radius: 50%;
     height: 250px;
 }
+header{
+    position: sticky;
+    top: 0;
+}
 nav{
     display: flex;
     background-color: #02a2ff;
@@ -122,8 +126,37 @@ a{
         margin-bottom: 0.5rem;
     }
 }
+
+.main-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding: 1.9rem;
+    
+}
+
+.card{
+    display: inline-block;
+    height: 40vh;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: #02a2ff2f;
+    margin: 1rem;
+}
+.btn{
+    display: block;
+    width: fit-content;
+    padding: 0.5rem 1rem;
+    margin: 1rem auto;
+    border-radius: 25px;
+    color: white;
+    background-color: #02a2ff;
+}
 @media only screen and (max-width:320px){
     .section-content{
         width: 90%;
+    }
+    
+    .main-container{
+        padding: 0;
     }
 }
