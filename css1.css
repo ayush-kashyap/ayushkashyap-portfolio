@@ -1,16 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 :root{
-    --maincolor: #02a2ff;
-    --alternatesection: #02a2ff2f;
+    --maincolor: #77ACF1;
+    --alternatesection: #77ACF14d;
 }
 body{
     margin: 0;
     font-family: 'Montserrat', sans-serif;
-    background-color: #02a2ff1f;
 }
 #header-title{
     color: white;
-    margin-left: 1rem;
+    margin-left: 2rem;
 }
 .text-center{
     text-align: center;
@@ -21,18 +20,14 @@ body{
     border-radius: 50%;
     height: 250px;
 }
-header{
-    position: sticky;
-    position: -webkit-sticky;
-    top: 0;
-}
+
 nav{
     display: flex;
     background-color: var(--maincolor);
     height: 8vh;
-    margin-right: 0.2rem;
+    margin: 0.5rem 3rem 0rem 3rem;
     align-items: center;
-    border-radius: 0px 25px 25px 0px;
+    border-radius: 25px;
     justify-content: space-between;
 }
 .navitems{
@@ -134,20 +129,20 @@ a{
 .btn{
     padding: 0.5rem 1rem;
     border-radius: 25px;
-    color: white;
     background-color: var(--maincolor);
+    color: white;
 }
 .number{
     position: absolute;
     top: 0;
     color: var(--maincolor);
-    background-color: white;
+    background-color: var(--alternatecolor);
     padding: 0.55rem 1rem;
     border-radius: 25px;
     display: none;
     font-weight: 900;
     box-shadow: 0px 1px 5px rgb(0 0 0 / 30%);
-    animation: fade 500ms ease-in-out;
+    animation: fader 500ms ease-in-out;
 }
 .card:hover .number{
     display: inline;
@@ -160,10 +155,18 @@ a{
 }
 @keyframes fade{
     from{
-        opacity: 0%;
+        transform: translateX(8rem);
     }
     to{
-        opacity: 100%;
+        transform: translateX(0rem);
+    }
+}
+@keyframes fader{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
     }
 }
 @media only screen and (max-width:500px){
@@ -173,14 +176,17 @@ a{
     #navigation{
         display: none;
         position: absolute;
-        top: 7vh;
-        right: 0.2rem;
+        top: 10vh;
+        right: -1rem;
         flex-direction: column;
-        padding: 0.5rem 1rem 1rem 2rem;
-        background-color: #02A4FF;
-        border-radius: 0px 0px 25px 25px;
+        padding: 0.7rem 0rem 0.7rem 1rem;
+        background-color: var(--maincolor);
+        border-radius: 50% 0% 0% 50%;
         animation: fade 500ms;
-        
+    }
+   
+    #nav{
+        margin: 0.5rem 1rem 0rem 1rem;
     }
     .section-content{
         width: 70%;
@@ -189,7 +195,7 @@ a{
         display: none;
     }
     .navitems{
-        margin-bottom: 0.5rem;
+        margin: 0.5rem 1rem 0.5rem 1rem;
     }
     .card{
         position: static;
