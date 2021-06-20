@@ -135,9 +135,9 @@ a{
     height: 250px;
     padding: 1rem;
     border-radius: 0.5rem 3rem 0.5rem 0.5rem;
-    background-color: var(--alternatesection);
+    background-color: white;
     margin: 1rem;
-    box-shadow: 0px 1px 10px 7px rgb(0 0 0 / 15%), 0px 1px 4px rgb(0 0 0 / 50%);
+    box-shadow: 0px 1px 10px 7px rgb(0 0 0 / 8%), 0px 1px 4px rgb(0 0 0 / 30%);
     animation: cardsin;
     
 }
@@ -176,12 +176,9 @@ a{
     position: absolute;
     top: 0;
     color: var(--maincolor);
-    background-color: var(--alternatecolor);
     padding: 0.55rem 1rem;
-    border-radius: 25px;
     display: none;
     font-weight: 900;
-    box-shadow: 0px 1px 5px rgb(0 0 0 / 30%);
     animation: fader 500ms ease-in-out;
 }
 .card:hover .number{
