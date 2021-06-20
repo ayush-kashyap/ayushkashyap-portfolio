@@ -1,41 +1,64 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&family=Montserrat&display=swap');
 :root{
-    --maincolor: #185ADB;
-    --alternatesection: #77ACF14d;
+    --maincolor: #49a0eb;
+    --alternatesection: #49a0eb4d;
 }
 body{
     margin: 0;
     font-family: 'Montserrat', sans-serif;
 }
 #header-title{
-    color: white;
+    color: var(--maincolor);
     margin-left: 2rem;
 }
 .text-center{
     text-align: center;
 }
 #profile{
-    display: block;
-    margin: auto;
+    padding: 7rem;
+    display: inline;
     border-radius: 50%;
-    height: 250px;
+    height: 350px;
 }
-
+#section-wrapper img{
+    display: inline;
+    height: 40vh; 
+    width: 50%;
+    margin: 1rem 0;
+}
 nav{
     display: flex;
-    background-color: var(--maincolor);
+    /* background-color: var(--maincolor); */
     height: 8vh;
     margin: 0.5rem 3rem 0rem 3rem;
     align-items: center;
-    border-radius: 0.5rem;
     justify-content: space-between;
 }
 .navitems{
-    color: white;
+    color: black;
     margin: 0rem 1rem;
     font-weight: 700;
 }
-
+#about{
+    height: 90vh;
+}
+#about div:nth-child(1){
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+#aboutme{
+    font-family: 'Quicksand';
+    width: 50%;
+}
+#aboutme >h3{
+    font-size: 3rem;
+}
+#aboutme > p{
+    font-size: 1.5rem;
+}
 #navigation{
     display: block;
     position: static;
@@ -72,32 +95,33 @@ footer{
 a{
     text-decoration: none;
 }
+
 #navi-bar{
     display: none;
     margin-right: 1.5rem;
     background-color: transparent;
     border: none;
-    color: white;
+    color: black;
     font-size: 1.3rem;
 }
 *:focus{
     outline: none;
 }
 .section-content{
-    margin: 1rem auto;
-    width: 60%; 
-    padding: 0.25rem 1rem 2rem 1rem;
+    display: flex;
+    box-sizing: border-box;
+    height: 50%;
+    width: 100%; 
 }
+
 #tech{
     color: blue;
     text-shadow: 2px 2px 10px white;
 }
-#blog{
-    
-    background-color: var(--alternatesection);
+.section-text{
+    padding: 4rem 5rem;
 }
-
-
+#close-nav{display: none;}
 .main-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -163,20 +187,19 @@ a{
 .card:hover .number{
     display: inline;
 }
-
+#section-wrapper{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
 .proj-date{
     font-size: 11px;
     font-style: italic;
     text-align: right;
 }
-@keyframes fade{
-    from{
-        transform: translateX(8rem);
-    }
-    to{
-        transform: translateX(0rem);
-    }
-}
+
 @keyframes fader{
     from{
         opacity: 0;
@@ -185,32 +208,69 @@ a{
         opacity: 1;
     }
 }
-@media only screen and (max-width:500px){
+@media only screen and (max-width:950px){
+    #profile{
+        padding: 3rem;
+    }
+}
+@media only screen and (max-width:800px){
+    .section-text{
+        padding: 1rem 1rem;
+    }
+    #about div:nth-child(1){
+        flex-wrap: wrap;
+    }
+    #aboutme{
+        width: 100%;
+    }
+    #profile{
+        padding: 1rem;
+        margin: 1rem auto;
+    }
+}
+@media only screen and (max-width:550px){
+    .section-text{
+        padding: 1rem 1rem;
+    }
+    #profile{
+        height: 16rem;
+    }
     #navi-bar{
         display: block;
     }
-    #navigation{
-        display: none;
-        position: absolute;
-        top: 10vh;
-        right: -1rem;
-        flex-direction: column;
-        padding: 0.7rem 0rem 0.7rem 1rem;
-        background-color: var(--maincolor);
-        border-radius: 50% 0% 0% 50%;
-        animation: fade 500ms;
+    #close-nav{
+        border: none;
+        position: absolute; 
+        top: 1rem;
+        right: 2rem;
+        background-color: transparent;
+        font-size: 1.5rem;
     }
-   
+    #navigation{
+        display: flex;
+        position: fixed;
+        top: 0vh;
+        right: 0rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2rem;
+        background-color: rgba(230, 244, 255, 0.925);
+        overflow: hidden;
+        width: 0%;
+        height: 100vh;
+        box-sizing: border-box;
+    }
+    
     #nav{
         margin: 0.5rem 1rem 0rem 1rem;
     }
-    .section-content{
-        width: 70%;
-    }
+    
     .text-hide{
         display: none;
     }
     .navitems{
+        color: var(--maincolor);
         margin: 0.5rem 1rem 0.5rem 1rem;
     }
     .card{
@@ -219,13 +279,43 @@ a{
     .card:hover .number{
         display: none;
     }
-}
-@media only screen and (max-width:320px){
-    .section-content{
-        width: 90%;
+    #profile{
+        margin: 2rem auto;
     }
-    
+    #aboutme{
+        margin: 2rem;
+    }
+}
+@media only screen and (max-width:400px){
+    .section-content{
+        flex-wrap: wrap;
+    }
+    #section-wrapper img{
+        display: inline;
+        height: 35vh; 
+        width: 100%;
+        margin: 1rem auto;
+    }
+    #projects{
+        flex-direction: column-reverse;
+    }
+    #section-wrapper{
+        height: auto;
+    }
+    #aboutme >h3{
+        font-size: 2rem;
+    }
+    #aboutme > p{
+        font-size: 1rem;
+    }
     .main-container{
         padding: 0;
+    }
+}
+
+@media only screen and (max-height:550px){
+    #profile{
+        height: 13rem;
+        margin: 0 auto;
     }
 }

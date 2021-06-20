@@ -14,38 +14,42 @@
 <body>
     <header>
         <nav id="nav">
-            <h3 id="header-title">Ayush Kashyap</h3>
-            <div id="navigation">
-            <a href="/" class="navitems" id="item1" onclick="return false;">Home</a>
-            <a href="" class="navitems" id="item2">Blogs</a>
-            <a href="projects.html" class="navitems" id="item3">Projects</a>
-            <a href="resume/AyushKashyap_Resume.pdf" class="navitems" id="item4">Resume</a>
-            </div>
+            <a href="ayushkashyap.netlify.app"><h3 id="header-title">Ayush Kashyap</h3></a>
+                <div id="navigation">
+                    <button onclick="hide()" id="close-nav"><i class="fa fa-times"></i></button>
+                    <a href="/" class="navitems" id="item1" onclick="return false;">Home</a>
+                    <a href="" class="navitems" id="item2">Blogs</a>
+                    <a href="projects.html" class="navitems" id="item3">Projects</a>
+                    <a href="resume/AyushKashyap_Resume.pdf" class="navitems" id="item4">Resume</a>
+                </div>
             <button id="navi-bar"><i class="fa fa-bars"></i></button>
         </nav>
     </header>
     <section id="about">
-        <div class="section-content">
+        <div>
             <img src="images/ayush.jpg" alt="" id="profile">
-            <h3 class="text-center">Hi! I am Ayush Kashyap.</h3>
-            <p class="text-center">I love being connected to technology.</p> 
+            <div id="aboutme">
+                <h3 class="text-center">Hi! I am Ayush Kashyap.</h3>
+                <p class="text-center">I love being connected to technology.</p> 
+            </div>
         </div>
     </section>
     
-    <section id="blog">
-        <div class="section-content">
-            <h3>Blogs</h3>
-            <p>I love writing blogs about latest tech and other stuff. You can read my blogs by clicking below.</p>
-            <a href="" id="view-blog" class="btn">View Blogs </a>
-        </div>
-    </section>
-    <section id="projects">
-        <div class="section-content">
-        <h3>Projects</h3>
-        <p>I have created few projects. You can see my projects posted online by clicking below.</p>
-        <a href="projects.html" id="view-projects" class="btn">View Projects</a>
-        </div>
-        
+    <section id="section-wrapper">
+            <div class="section-content" id="blog">
+                <div class="section-text"> <h3>Blogs</h3>
+                    <p>I love writing blogs about latest tech and other stuff. You can read my blogs by clicking below.</p><a href="" id="view-blog" class="btn">View Blogs </a></div>
+                <img src="/images/blog.svg" alt="">
+            
+            </div>
+            
+            
+            <div class="section-content" id="projects"><img src="/images/projects.svg" alt="">
+            <div class="section-text"><h3>Projects</h3>
+                <p>I have created few projects. 
+                    You can see my projects posted online by clicking below.</p>
+                <a href="projects.html" id="view-projects" class="btn">View Projects</a></div>
+            </div>
     </section>
     <footer>
         <h3 class="text-center">Let's Connect Socially</h3>
