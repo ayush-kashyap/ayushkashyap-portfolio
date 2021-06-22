@@ -3,7 +3,27 @@
     --maincolor: #49a0eb;
     --alternatesection: #49a0eb4d;
 }
+html{
+   scroll-behavior: smooth;
+}
+.hover1{
+    margin: 0rem;
+    position: absolute;
+    left: -2px;
+    bottom: -5px;
+    background-color: black;
+    width: 0%;
+    height: 2px;
+    transition: linear 300ms;
+}
+.navitems:hover .hover1{
+    width: 110%;
+}
+.navitems:hover{
+    color: black;
+}
 body{
+   
     margin: 0;
     font-family: 'Montserrat', sans-serif;
 }
@@ -20,6 +40,7 @@ body{
     border-radius: 50%;
     height: 350px;
 }
+
 #section-wrapper img{
     display: inline;
     height: 40vh; 
@@ -35,7 +56,8 @@ nav{
     justify-content: space-between;
 }
 .navitems{
-    color: black;
+    position: relative;
+    color: #858585;
     margin: 0rem 1rem;
     font-weight: 700;
 }
@@ -137,13 +159,28 @@ a{
     border-radius: 0.5rem 3rem 0.5rem 0.5rem;
     background-color: white;
     margin: 1rem;
-    box-shadow: 0px 1px 10px 7px rgb(0 0 0 / 8%), 0px 1px 4px rgb(0 0 0 / 30%);
+    box-shadow: 0px 1px 20px 3px rgb(0 0 0 / 8%);
     animation: cardsin;
-    
+    transition: linear 300ms;
+}
+#scroll{
+    display: none;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    padding: 0.5rem 0.8rem;
+    font-size: larger;
+    border-radius: 2rem;
+    color: white;
+    background-color: var(--maincolor);
+}
+.card:hover{
+    transform: scale(1.1) translateY(-2rem);
+    box-shadow: 0px 1px 10px var(--maincolor);
 }
 @keyframes cardsin{
     from{
-        transform: translateX(-500px);
+        transform: translateX(-500px) rotate(30deg);
     }
     to{
         transform: translateX(0px);
@@ -257,6 +294,7 @@ a{
         width: 0%;
         height: 100vh;
         box-sizing: border-box;
+        transition: all linear 350ms;
     }
     
     #nav{
