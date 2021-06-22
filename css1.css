@@ -263,6 +263,9 @@ a{
     }
 }
 @media only screen and (max-width:550px){
+    .card:hover{
+        transform: none;
+    }
     .section-text{
         padding: 1rem 1rem;
     }
