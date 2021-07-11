@@ -20,3 +20,15 @@ function Top(){
     document.body.scrollTop = 0 ;
     document.documentElement.scrollTop = 0 ;
 }
+var i = 0;
+var txt = 'Hi! I am Ayush Kashyap.';
+var speed = 40;
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.querySelector(".intro").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+window.onload = typeWriter;

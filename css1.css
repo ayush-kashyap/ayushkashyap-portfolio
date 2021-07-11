@@ -173,6 +173,15 @@ a{
     border-radius: 2rem;
     color: white;
     background-color: var(--maincolor);
+    animation: scrollin linear 500ms;
+}
+@keyframes scrollin{
+    from{
+        transform: translateX(5rem);
+    }
+    to{
+        transform: translateX(0rem);
+    }
 }
 .card:hover{
     transform: scale(1.1) translateY(-2rem);
